@@ -1,0 +1,311 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --primary: #8b5cf6;    /* Vibrant purple */
+    --secondary: #e0e7ff;  /* Light blue */
+    --text: #1f2937;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary);
+    color: var(--text);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+header p {
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+/* Form Section */
+.form-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.form-card h2 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #374151;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #6b21a8; /* Darker purple for hover */
+}
+
+/* Book Cards */
+#libraryContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.book-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+.book-card h3 {
+    margin-bottom: 5px;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.book-card p {
+    margin: 4px 0;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    min-width: 80px;
+    text-align: center;
+}
+
+.read {
+    background-color: #34d399;  /* Teal */
+}
+
+.not-read {
+    background-color: #f87171;  /* Soft red */
+}
+
+@media (min-width: 600px) {
+    #libraryContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ======================= */
+/*    💬 Dialog Styling    */
+/* ======================= */
+
+dialog {
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    /* height: auto; */
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Form inside dialog */
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* spacing between inputs */
+    height: auto;
+}
+
+dialog form h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+dialog input[type="text"],
+dialog input[type="number"] {
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #fff;
+}
+
+dialog input::placeholder {
+    color: #9ca3af;
+}
+
+dialog label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+dialog input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Dialog Buttons */
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dialog-buttons button {
+    flex: 1;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dialog-buttons button:hover {
+    background-color: #6b21a8; /* Darker purple for hover */
+}
+
+/* Group wrapper for inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group input {
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--primary);
+    border-color: var(--primary);
+}
+
+/* Label + checkbox layout */
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group.checkbox label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Dialog buttons layout */
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.dialog-buttons button {
+    flex: 1;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dialog-buttons button:hover {
+    background-color: #6b21a8; /* Darker purple for hover */
+}
+.card-btn {
+    padding: 5px 10px;
+    background-color: #f87171;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+    background-color: #f87171;
+}

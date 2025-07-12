@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarmad's Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📚 Sarmad's Library </h1>
+            <p>This is a personal digital library where you can keep track of all your favorite books. Add new books to your collection, mark them as read or not read, and organize them with ease. Whether you're a fan of fiction, non-fiction, or anything in between, this library is designed to help you manage your reading list effortlessly.</p>
+            <p>هذه مكتبة رقمية شخصية تُمكّنك من تتبّع جميع كتبك المفضلة. أضف كتبًا جديدة إلى مجموعتك، وحدّدها كمقروءة أو غير مقروءة، ونظّمها بسهولة. سواء كنت من مُحبي الروايات أو الكتب الواقعية أو أي شيء بينهما، فهذه المكتبة مُصمّمة لمساعدتك على إدارة قائمة قراءتك بسهولة.</p>
+        </header>
+
+        <section class="form-card">
+            <h2 style=" display: flex; justify-content: center;">Add a Book اضافة كتاب</h2>
+            <form id="bookForm">
+                <!-- <input type="text" id="title" placeholder="Book Title اسم الكتاب" required>
+                <input type="text" id="author" placeholder="Author الكاتب" required>
+                <input type="number" id="pages" placeholder="Pages عدد الصفحات" required>
+                <label>
+                    <input type="checkbox" id="read"> Mark as Read التحديد كمقروء
+                </label> -->
+                <!-- <button type="submit"> + Add Book اضافة الكتاب</button> -->
+                <button type="submit" id="new-book"> + Add New Book  اضافة كتاب جديد</button>
+
+
+
+            </form>
+            <dialog id="dialog">
+    <form  id="dialogForm">
+        <h2>Add a New Book</h2>
+
+        <div class="form-group">
+            <input type="text" id="dialog-title" placeholder="Book Title اسم الكتاب" required />
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="dialog-author" placeholder="Author الكاتب" required />
+        </div>
+
+        <div class="form-group">
+            <input type="number" id="dialog-pages" placeholder="Pages عدد الصفحات" required />
+        </div>
+
+        <div class="form-group checkbox">
+            <label>
+                <input type="checkbox" id="dialog-read" />
+                Mark as Read التحديد كمقروء
+            </label>
+        </div>
+
+        <div class="dialog-buttons">
+            <button type="submit" id="dialog-add">+ Add Book</button>
+            <button type="button" id="dialogCancel">Cancel</button>
+        </div>
+    </form>
+</dialog>
+        </section>
+
+        <section id="libraryContainer">
+            <!-- Book cards will appear here -->
+        </section>
+    </div>
+<script src="./library.js" defer></script>
+</body>
+
+</html>
